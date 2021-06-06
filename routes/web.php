@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('index');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', [UserController::class, 'index']);
+
+Route::get('download-pdf', [UserController::class, 'downloadPDF']);
+
+
 

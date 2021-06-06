@@ -27,10 +27,13 @@
 
     </tr>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
     
     
   </tbody>
 </table>
+<a href="<?php echo e(url('/download-pdf')); ?>"><input class="btn btn-warning" type="submit" value="Export report"></a>
+
         </div>
     </div>
 </div>

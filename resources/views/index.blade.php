@@ -27,10 +27,13 @@
 
     </tr>
     @endforeach
+
     
     
   </tbody>
 </table>
+<a href="{{url('/download-pdf')}}"><input class="btn btn-warning" type="submit" value="Export report"></a>
+
         </div>
     </div>
 </div>
